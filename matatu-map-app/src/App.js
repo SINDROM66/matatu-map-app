@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { MapPin, Bus, Search, BookText, LocateFixed } from 'lucide-react';
+import Map from './components/Map'; // Import the Map component
 
 function App() {
   // Matatu data extracted and approximated from Matatus-2014.pdf
@@ -106,7 +107,7 @@ function App() {
   const [selectedStage, setSelectedStage] = useState(null);
   const [message, setMessage] = useState('');
 
-  // Geolocation hook - ADDED
+  // Geolocation hook
   useEffect(() => {
     if (!navigator.geolocation) {
       setMessage("Geolocation is not supported by your browser. Using default location.");
@@ -200,17 +201,9 @@ function App() {
       <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Left Column */}
         <div className="flex flex-col gap-6">
-          {/* Map */}
-          <div className="bg-gray-200 h-64 md:h-80 rounded-xl shadow-md overflow-hidden flex items-center justify-center p-4 relative">
-            <iframe
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              loading="lazy"
-              allowFullScreen
-              src="https://www.google.com/maps?q=Nairobi+CBD&z=13&output=embed"
-              title="Google Maps of Nairobi CBD"
-            ></iframe>
+          {/* Map - REPLACED WITH MAP COMPONENT */}
+          <div className="bg-gray-200 h-64 md:h-80 rounded-xl shadow-md overflow-hidden">
+            <Map />
           </div>
 
           {/* Inputs */}
