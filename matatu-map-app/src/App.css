@@ -58,3 +58,14 @@ code {
 }
 
 /* Add any additional custom styles you need here */
+
+/* Map container styles */
+.map-container {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
