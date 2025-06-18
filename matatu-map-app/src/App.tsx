@@ -39,43 +39,23 @@ function App() {
                 ],
                 moreRoutes: 2,
               },
-              {
-                id: 'stage2',
-                name: 'Ambassador/Kencom Stage',
-                isHub: true,
-                matatus: [
-                  { number: '19C', destination: 'Pangani', fare: 'Ksh 30-50' },
-                  { number: '33', destination: 'Karen', fare: 'Ksh 70-120' },
-                  { number: '20/30', destination: 'Upperhill', fare: 'Ksh 40-70' },
-                ],
-                moreRoutes: 5,
-              },
             ]}
           />
         </Route>
         <Route path="/directory">
           <Directory
             stage={{
-              id: 'stage2',
-              name: 'Odeon Cinema Stage',
+              id: 'stage1',
+              name: 'Total/Shell Petrol Station Stage',
               isHub: true,
               matatus: [
-                { number: '70', destination: 'Kawangware' },
-                { number: '32', destination: 'Kangemi' },
-                { number: '24C', destination: 'Lavington' },
+                { number: '17B', destination: 'Komarocks' },
+                { number: '4W', destination: 'Jacaranda' },
+                { number: '19', destination: 'Pangani' },
               ],
               moreRoutes: 2,
             }}
-            quickDestinations={[
-              { name: 'Karen', matatuNumber: '33' },
-              { name: 'Kasarani', matatuNumber: '44' },
-              { name: 'Thika', matatuNumber: '100' },
-              { name: 'Donholm', matatuNumber: '14' },
-              { name: 'Westlands', matatuNumber: '107' },
-              { name: 'Kawangware', matatuNumber: '70' },
-              { name: 'Kayole', matatuNumber: '102' },
-              { name: 'Githurai', matatuNumber: '45' },
-            ]}
+            quickDestinations={[]}
           />
         </Route>
         <Route path="/reference" component={ReferenceTools} />
